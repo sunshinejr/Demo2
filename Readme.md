@@ -11,4 +11,4 @@ Environment:
 Still supporting iOS 12.0 since a lot of older devices cannot upgrade to iOS 13.
 
 ## License
-![MIT](License)
+[MIT](License)
