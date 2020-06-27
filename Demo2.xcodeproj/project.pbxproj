@@ -11,6 +11,10 @@
 		85EC292024A7601000B6A9BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC291F24A7601000B6A9BE /* ViewController.swift */; };
 		85EC292524A7601300B6A9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC292424A7601300B6A9BE /* Assets.xcassets */; };
 		85EC292824A7601300B6A9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85EC292624A7601300B6A9BE /* LaunchScreen.storyboard */; };
+		85EC293224A7657100B6A9BE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293124A7657100B6A9BE /* Comment.swift */; };
+		85EC293424A7658000B6A9BE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293324A7658000B6A9BE /* Post.swift */; };
+		85EC293824A7659B00B6A9BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293724A7659B00B6A9BE /* User.swift */; };
+		85EC293A24A765B600B6A9BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293924A765B600B6A9BE /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		85EC292424A7601300B6A9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85EC292724A7601300B6A9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85EC292924A7601300B6A9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85EC293124A7657100B6A9BE /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		85EC293324A7658000B6A9BE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		85EC293724A7659B00B6A9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		85EC293924A765B600B6A9BE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +60,41 @@
 		85EC291A24A7601000B6A9BE /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				85EC292F24A7656200B6A9BE /* Models */,
+				85EC293024A7656600B6A9BE /* Networking */,
+				85EC293B24A765D900B6A9BE /* Views */,
 				85EC291B24A7601000B6A9BE /* AppDelegate.swift */,
-				85EC291F24A7601000B6A9BE /* ViewController.swift */,
 				85EC292424A7601300B6A9BE /* Assets.xcassets */,
-				85EC292624A7601300B6A9BE /* LaunchScreen.storyboard */,
 				85EC292924A7601300B6A9BE /* Info.plist */,
+				85EC292624A7601300B6A9BE /* LaunchScreen.storyboard */,
 			);
 			path = Demo2;
+			sourceTree = "<group>";
+		};
+		85EC292F24A7656200B6A9BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85EC293124A7657100B6A9BE /* Comment.swift */,
+				85EC293324A7658000B6A9BE /* Post.swift */,
+				85EC293724A7659B00B6A9BE /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85EC293024A7656600B6A9BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				85EC293924A765B600B6A9BE /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		85EC293B24A765D900B6A9BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85EC291F24A7601000B6A9BE /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				85EC292024A7601000B6A9BE /* ViewController.swift in Sources */,
+				85EC293224A7657100B6A9BE /* Comment.swift in Sources */,
 				85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */,
+				85EC293A24A765B600B6A9BE /* Networking.swift in Sources */,
+				85EC293824A7659B00B6A9BE /* User.swift in Sources */,
+				85EC293424A7658000B6A9BE /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
