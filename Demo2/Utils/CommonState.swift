@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CommonState {
+enum CommonState: Equatable {
     case loading
     case content([ListItem])
     case error(ErrorModel)

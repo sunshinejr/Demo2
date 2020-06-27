@@ -25,6 +25,11 @@
 		85F4E23F24A77E3200E2025F /* CommonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E23E24A77E3200E2025F /* CommonState.swift */; };
 		85F4E24124A77E4200E2025F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24024A77E4200E2025F /* Action.swift */; };
 		85F4E24324A77E5700E2025F /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24224A77E5700E2025F /* ErrorModel.swift */; };
+		85F4E24524A7965E00E2025F /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24424A7965E00E2025F /* LoaderViewController.swift */; };
+		85F4E24824A7967800E2025F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24724A7967800E2025F /* UIView.swift */; };
+		85F4E24A24A796A800E2025F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24924A796A800E2025F /* UIAlertController.swift */; };
+		85F4E24C24A796B700E2025F /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24B24A796B700E2025F /* CGSize.swift */; };
+		85F4E25024A796D700E2025F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E24F24A796D700E2025F /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		85F4E23E24A77E3200E2025F /* CommonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonState.swift; sourceTree = "<group>"; };
 		85F4E24024A77E4200E2025F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		85F4E24224A77E5700E2025F /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		85F4E24424A7965E00E2025F /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		85F4E24724A7967800E2025F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		85F4E24924A796A800E2025F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		85F4E24B24A796B700E2025F /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		85F4E24F24A796D700E2025F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		85EC291A24A7601000B6A9BE /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				85F4E24624A7967000E2025F /* Extensions */,
 				85EC292F24A7656200B6A9BE /* Models */,
 				85EC293024A7656600B6A9BE /* Networking */,
 				85F4E23724A7784400E2025F /* Utils */,
@@ -116,8 +127,9 @@
 		85EC293B24A765D900B6A9BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85EC291F24A7601000B6A9BE /* TableViewController.swift */,
+				85F4E24424A7965E00E2025F /* LoaderViewController.swift */,
 				85F4E23A24A77E0500E2025F /* PostsViewModel.swift */,
+				85EC291F24A7601000B6A9BE /* TableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +145,17 @@
 				85F4E23824A7784C00E2025F /* Localized.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		85F4E24624A7967000E2025F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85F4E24B24A796B700E2025F /* CGSize.swift */,
+				85F4E24924A796A800E2025F /* UIAlertController.swift */,
+				85F4E24724A7967800E2025F /* UIView.swift */,
+				85F4E24F24A796D700E2025F /* UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,15 +234,20 @@
 				85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */,
 				85F4E23924A7784C00E2025F /* Localized.swift in Sources */,
 				85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */,
+				85F4E24A24A796A800E2025F /* UIAlertController.swift in Sources */,
 				85F4E24324A77E5700E2025F /* ErrorModel.swift in Sources */,
 				85F4E23224A7735500E2025F /* Environment.swift in Sources */,
 				85EC293A24A765B600B6A9BE /* Networking.swift in Sources */,
+				85F4E24524A7965E00E2025F /* LoaderViewController.swift in Sources */,
 				85F4E23B24A77E0500E2025F /* PostsViewModel.swift in Sources */,
+				85F4E24C24A796B700E2025F /* CGSize.swift in Sources */,
 				85EC293824A7659B00B6A9BE /* User.swift in Sources */,
+				85F4E25024A796D700E2025F /* UIViewController.swift in Sources */,
 				85F4E23D24A77E2400E2025F /* ListItem.swift in Sources */,
 				85EC293424A7658000B6A9BE /* Post.swift in Sources */,
 				85F4E23F24A77E3200E2025F /* CommonState.swift in Sources */,
 				85F4E24124A77E4200E2025F /* Action.swift in Sources */,
+				85F4E24824A7967800E2025F /* UIView.swift in Sources */,
 				85F4E23024A770A600E2025F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

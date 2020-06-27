@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ErrorModel {
+struct ErrorModel: Equatable {
     let title: String?
     let description: String?
     let actions: [AlertAction]

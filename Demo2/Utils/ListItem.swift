@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ListItem {
-    case post(title: String, body: String, author: String, more: ButtonAction)
-    case comment(title: String, body: String, author: String)
+enum ListItem: Equatable {
+    case post(id: String, title: String, body: String, author: String, more: ButtonAction)
+    case comment(id: String, title: String, body: String, author: String)
 }

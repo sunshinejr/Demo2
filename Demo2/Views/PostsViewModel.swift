@@ -29,6 +29,7 @@ final class PostsViewModel: CommonViewModeling {
     }
 
     private func fetchContent() {
+        update(state: .loading)
         api.fetchPosts { [weak self] result in
             switch result {
             case let .success(posts):
@@ -42,10 +43,9 @@ final class PostsViewModel: CommonViewModeling {
     private func updateState(with posts: [Post]) {
         let items: [ListItem] = posts.map { post in
             #warning("TODO: User storage + loading if needed")
-            return .post(title: post.title, body: post.body, author: "\(post.userId)", more: ButtonAction(name: localized("More by this author"), action: nil))
+            return .post(id: "post_\(post.id)", title: post.title, body: post.body, author: "\(post.userId)", more: ButtonAction(name: localized("More by this author"), action: nil))
         }
-        state = .content(items)
-        notifyAboutUpdating()
+        update(state: .content(items))
     }
 
     private func updateState(with error: Error) {
@@ -56,13 +56,18 @@ final class PostsViewModel: CommonViewModeling {
             self?.fetchContent()
         })
         let model = ErrorModel(title: title, description: description, actions: [cancelAction, retryAction])
-        state = .error(model)
+        update(state: .error(model))
+    }
+
+    private func update(state: CommonState) {
+        guard self.state != state else { return }
+
+        self.state = state
         notifyAboutUpdating()
     }
 
     private func notifyAboutUpdating() {
         updateCallbacks.objectEnumerator()?.forEach { callback in
-            NSLog("object!")
             guard let callback = callback as? Action else { return }
 
             callback()
