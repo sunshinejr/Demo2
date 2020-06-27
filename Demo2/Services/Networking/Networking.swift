@@ -15,7 +15,7 @@ enum NetworkingError: Error {
 protocol Networking {
     #warning("API doesn't support pagination yet, though we should keep an eye on that")
     func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void)
-    func fetchPosts(for user: User, completion: @escaping (Result<[Post], Error>) -> Void)
+    func fetchPosts(from user: User, completion: @escaping (Result<[Post], Error>) -> Void)
     func fetchComments(for post: Post, completion: @escaping (Result<[Comment], Error>) -> Void)
     func fetchUser(using userId: Int, completion: @escaping (Result<User, Error>) -> Void)
 }

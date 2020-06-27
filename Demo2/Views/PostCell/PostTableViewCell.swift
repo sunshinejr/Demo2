@@ -45,6 +45,8 @@ final class PostTableViewCell: UITableViewCell, Reusable {
 
     private let more: TappableButton = {
         let button = TappableButton(type: .system)
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
+        button.titleLabel?.font = .preferredFont(forTextStyle: .footnote)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setContentCompressionResistancePriority(.required, for: .horizontal)
         button.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -53,11 +55,22 @@ final class PostTableViewCell: UITableViewCell, Reusable {
     }()
 
     private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [author, title, body])
+        let stackView = UIStackView(arrangedSubviews: [authorStackView, title, body])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         stackView.axis = .vertical
         stackView.spacing = 8.0
+        stackView.setContentCompressionResistancePriority(.required, for: .horizontal)
+        stackView.setContentCompressionResistancePriority(.required, for: .vertical)
+
+        return stackView
+    }()
+
+    private lazy var authorStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [author, .flexibleSpacer(), more])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fill
+        stackView.axis = .horizontal
         stackView.setContentCompressionResistancePriority(.required, for: .horizontal)
         stackView.setContentCompressionResistancePriority(.required, for: .vertical)
 
@@ -86,6 +99,7 @@ final class PostTableViewCell: UITableViewCell, Reusable {
     }
 
     private func setupView() {
+        selectionStyle = .none
         contentView.add(subviews: contentStackView)
         contentStackView.pin(to: contentView, insets: .all(16.0))
     }
@@ -114,6 +128,15 @@ final class PostTableViewCell: UITableViewCell, Reusable {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
+        UIView.animate(withDuration: 0.2) {
+            self.contentView.backgroundColor = .demoGray
+        }
+
         viewModel?.didTapPost?()
+
+        UIView.animate(withDuration: 0.2, delay: 0.2, animations: {
+            self.contentView.backgroundColor = .white
+        })
     }
 }
+

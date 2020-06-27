@@ -21,8 +21,13 @@ final class URLSessionNetworking: Networking {
         request(url: Constants.API.postsUrl, completion: completion)
     }
 
-    func fetchPosts(for user: User, completion: @escaping (Result<[Post], Error>) -> Void) {
-        request(url: Constants.API.postsUrl(for: user.id), completion: completion)
+    func fetchPosts(from user: User, completion: @escaping (Result<[Post], Error>) -> Void) {
+        guard let url = Constants.API.postsUrl(for: user.id) else {
+            completion(.failure(NetworkingError.unknown))
+            return
+        }
+
+        request(url: url, completion: completion)
     }
 
     func fetchComments(for post: Post, completion: @escaping (Result<[Comment], Error>) -> Void) {

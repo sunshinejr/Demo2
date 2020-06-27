@@ -10,6 +10,7 @@ import UIKit
 
 final class AppCoordinator {
     private let window: UIWindow
+    private var navigation: UINavigationController?
 
     init(window: UIWindow) {
         self.window = window
@@ -18,18 +19,21 @@ final class AppCoordinator {
     func start() {
         let controller = TableViewController(viewModel: PostsViewModel(navigation: self))
         let navigation = UINavigationController(rootViewController: controller)
-        navigation.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigation
         window.makeKeyAndVisible()
+
+        self.navigation = navigation
     }
 }
 
 extension AppCoordinator: PostsNavigating {
     func didTapMore(by user: User) {
-
+        let controller = TableViewController(viewModel: PostsViewModel(fromUser: user, navigation: self))
+        navigation?.pushViewController(controller, animated: true)
     }
 
     func didTapDetails(of post: Post) {
-
+        let controller = TableViewController(viewModel: PostsViewModel(navigation: self))
+        navigation?.pushViewController(controller, animated: true)
     }
 }

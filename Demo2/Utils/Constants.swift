@@ -11,14 +11,16 @@ import Foundation
 enum Constants {
     enum API {
         static let baseUrl = URL(string: "https://jsonplaceholder.typicode.com/")!
-        static let postsUrl = baseUrl.appendingPathComponent("posts")
+        static let postsUrl = baseUrl.appendingPathComponent("posts", isDirectory: false)
 
-        static func postsUrl(for userId: Int) -> URL {
-            // since it's an int we shouldn't need to worry about encoding it properly
-            return postsUrl.appendingPathComponent("?userId=\(userId)", isDirectory: false)
+        static func postsUrl(for userId: Int) -> URL? {
+            var components = URLComponents(url: postsUrl, resolvingAgainstBaseURL: false)
+            components?.queryItems = [URLQueryItem(name: "userId", value: "\(userId)")]
+            return components?.url
         }
 
         static func commentsUrl(for postId: Int) -> URL {
+            // since it's an int we shouldn't need to worry about encoding it properly
             return postsUrl.appendingPathComponent("\(postId)", isDirectory: true).appendingPathComponent("comments", isDirectory: true)
         }
 

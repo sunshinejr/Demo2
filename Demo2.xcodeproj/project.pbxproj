@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857A61F124A7B59700184FB8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61F024A7B59700184FB8 /* UIColor.swift */; };
 		85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC291B24A7601000B6A9BE /* AppDelegate.swift */; };
 		85EC292024A7601000B6A9BE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC291F24A7601000B6A9BE /* TableViewController.swift */; };
 		85EC292524A7601300B6A9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC292424A7601300B6A9BE /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		857A61F024A7B59700184FB8 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		85EC291824A7601000B6A9BE /* Demo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EC291B24A7601000B6A9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85EC291F24A7601000B6A9BE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				85F4E24B24A796B700E2025F /* CGSize.swift */,
 				85F4E24924A796A800E2025F /* UIAlertController.swift */,
+				857A61F024A7B59700184FB8 /* UIColor.swift */,
 				85F4E25C24A7AF6700E2025F /* UIEdgeInsets.swift */,
 				85F4E26024A7AF9500E2025F /* UITableViewCell.swift */,
 				85F4E24724A7967800E2025F /* UIView.swift */,
@@ -308,6 +311,7 @@
 				85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */,
 				85F4E26124A7AF9500E2025F /* UITableViewCell.swift in Sources */,
 				85F4E23924A7784C00E2025F /* Localized.swift in Sources */,
+				857A61F124A7B59700184FB8 /* UIColor.swift in Sources */,
 				85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */,
 				85F4E25224A79B1600E2025F /* TappableButton.swift in Sources */,
 				85F4E24A24A796A800E2025F /* UIAlertController.swift in Sources */,

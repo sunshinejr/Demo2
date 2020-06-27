@@ -15,15 +15,19 @@ protocol PostsNavigating: AnyObject {
 
 final class PostsViewModel: ListViewModeling {
     var state: ListState
-    var title = localized("Posts")
+    var title: String
 
     private var updateCallbacks = NSMapTable<AnyObject, Action>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     private let api: Networking
+    private let fromUser: User?
     private weak var navigation: PostsNavigating?
 
-    init(api: Networking = CurrentEnvironment.api, navigation: PostsNavigating) {
+    init(fromUser: User? = nil, api: Networking = CurrentEnvironment.api, navigation: PostsNavigating) {
+        self.fromUser = fromUser
         self.api = api
         self.navigation = navigation
+
+        title = fromUser.map { localized("%@'s Posts").replacingOccurrences(of: "%@", with: $0.name) } ?? localized("Posts")
         state = .loading
         fetchContent()
     }
@@ -38,13 +42,20 @@ final class PostsViewModel: ListViewModeling {
 
     private func fetchContent() {
         update(state: .loading)
-        api.fetchPosts { [weak self] result in
+
+        let completion: (Result<[Post], Error>) -> Void = { [weak self] result in
             switch result {
             case let .success(posts):
                 self?.updateState(with: posts)
             case let .failure(error):
                 self?.updateState(with: error)
             }
+        }
+
+        if let fromUser = fromUser {
+            api.fetchPosts(from: fromUser, completion: completion)
+        } else {
+            api.fetchPosts(completion: completion)
         }
     }
 
