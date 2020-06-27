@@ -15,6 +15,8 @@
 		85EC293424A7658000B6A9BE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293324A7658000B6A9BE /* Post.swift */; };
 		85EC293824A7659B00B6A9BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293724A7659B00B6A9BE /* User.swift */; };
 		85EC293A24A765B600B6A9BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293924A765B600B6A9BE /* Networking.swift */; };
+		85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E22D24A7708A00E2025F /* URLSessionNetworking.swift */; };
+		85F4E23024A770A600E2025F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E22F24A770A600E2025F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		85EC293324A7658000B6A9BE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		85EC293724A7659B00B6A9BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85EC293924A765B600B6A9BE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		85F4E22D24A7708A00E2025F /* URLSessionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworking.swift; sourceTree = "<group>"; };
+		85F4E22F24A770A600E2025F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				85EC293024A7656600B6A9BE /* Networking */,
 				85EC293B24A765D900B6A9BE /* Views */,
 				85EC291B24A7601000B6A9BE /* AppDelegate.swift */,
+				85F4E22F24A770A600E2025F /* Constants.swift */,
 				85EC292424A7601300B6A9BE /* Assets.xcassets */,
 				85EC292924A7601300B6A9BE /* Info.plist */,
 				85EC292624A7601300B6A9BE /* LaunchScreen.storyboard */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				85EC293924A765B600B6A9BE /* Networking.swift */,
+				85F4E22D24A7708A00E2025F /* URLSessionNetworking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -170,9 +176,11 @@
 				85EC292024A7601000B6A9BE /* ViewController.swift in Sources */,
 				85EC293224A7657100B6A9BE /* Comment.swift in Sources */,
 				85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */,
+				85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */,
 				85EC293A24A765B600B6A9BE /* Networking.swift in Sources */,
 				85EC293824A7659B00B6A9BE /* User.swift in Sources */,
 				85EC293424A7658000B6A9BE /* Post.swift in Sources */,
+				85F4E23024A770A600E2025F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
