@@ -17,6 +17,8 @@
 		85EC293A24A765B600B6A9BE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC293924A765B600B6A9BE /* Networking.swift */; };
 		85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E22D24A7708A00E2025F /* URLSessionNetworking.swift */; };
 		85F4E23024A770A600E2025F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E22F24A770A600E2025F /* Constants.swift */; };
+		85F4E23224A7735500E2025F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E23124A7735500E2025F /* Environment.swift */; };
+		85F4E23624A7737400E2025F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E23524A7737400E2025F /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		85EC293924A765B600B6A9BE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		85F4E22D24A7708A00E2025F /* URLSessionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworking.swift; sourceTree = "<group>"; };
 		85F4E22F24A770A600E2025F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		85F4E23124A7735500E2025F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		85F4E23524A7737400E2025F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,10 @@
 				85EC292F24A7656200B6A9BE /* Models */,
 				85EC293024A7656600B6A9BE /* Networking */,
 				85EC293B24A765D900B6A9BE /* Views */,
+				85F4E23524A7737400E2025F /* AppCoordinator.swift */,
 				85EC291B24A7601000B6A9BE /* AppDelegate.swift */,
 				85F4E22F24A770A600E2025F /* Constants.swift */,
+				85F4E23124A7735500E2025F /* Environment.swift */,
 				85EC292424A7601300B6A9BE /* Assets.xcassets */,
 				85EC292924A7601300B6A9BE /* Info.plist */,
 				85EC292624A7601300B6A9BE /* LaunchScreen.storyboard */,
@@ -175,8 +181,10 @@
 			files = (
 				85EC292024A7601000B6A9BE /* ViewController.swift in Sources */,
 				85EC293224A7657100B6A9BE /* Comment.swift in Sources */,
+				85F4E23624A7737400E2025F /* AppCoordinator.swift in Sources */,
 				85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */,
 				85F4E22E24A7708A00E2025F /* URLSessionNetworking.swift in Sources */,
+				85F4E23224A7735500E2025F /* Environment.swift in Sources */,
 				85EC293A24A765B600B6A9BE /* Networking.swift in Sources */,
 				85EC293824A7659B00B6A9BE /* User.swift in Sources */,
 				85EC293424A7658000B6A9BE /* Post.swift in Sources */,
