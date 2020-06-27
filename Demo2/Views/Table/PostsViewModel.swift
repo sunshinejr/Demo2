@@ -8,14 +8,22 @@
 
 import Foundation
 
-final class PostsViewModel: CommonViewModeling {
-    var state: CommonState
+protocol PostsNavigating: AnyObject {
+    func didTapMore(by user: User)
+    func didTapDetails(of post: Post)
+}
 
-    private(set) var updateCallbacks = NSMapTable<AnyObject, Action>(keyOptions: .weakMemory, valueOptions: .strongMemory)
+final class PostsViewModel: ListViewModeling {
+    var state: ListState
+    var title = localized("Posts")
+
+    private var updateCallbacks = NSMapTable<AnyObject, Action>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     private let api: Networking
+    private weak var navigation: PostsNavigating?
 
-    init(api: Networking = CurrentEnvironment.api) {
+    init(api: Networking = CurrentEnvironment.api, navigation: PostsNavigating) {
         self.api = api
+        self.navigation = navigation
         state = .loading
         fetchContent()
     }
@@ -43,7 +51,14 @@ final class PostsViewModel: CommonViewModeling {
     private func updateState(with posts: [Post]) {
         let items: [ListItem] = posts.map { post in
             #warning("TODO: User storage + loading if needed")
-            return .post(id: "post_\(post.id)", title: post.title, body: post.body, author: "\(post.userId)", more: ButtonAction(name: localized("More by this author"), action: nil))
+            let postViewModel = PostViewModel(post: post,
+                                              didTapMore: { [weak self] user in
+                                                  self?.navigation?.didTapMore(by: user)
+                                              },
+                                              didTapPost: { [weak self] in
+                                                  self?.navigation?.didTapDetails(of: post)
+                                              })
+            return .post(postViewModel)
         }
         update(state: .content(items))
     }
@@ -59,7 +74,7 @@ final class PostsViewModel: CommonViewModeling {
         update(state: .error(model))
     }
 
-    private func update(state: CommonState) {
+    private func update(state: ListState) {
         guard self.state != state else { return }
 
         self.state = state

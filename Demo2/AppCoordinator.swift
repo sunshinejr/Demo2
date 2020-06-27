@@ -16,7 +16,20 @@ final class AppCoordinator {
     }
 
     func start() {
-        window.rootViewController = TableViewController(viewModel: PostsViewModel())
+        let controller = TableViewController(viewModel: PostsViewModel(navigation: self))
+        let navigation = UINavigationController(rootViewController: controller)
+        navigation.navigationBar.prefersLargeTitles = true
+        window.rootViewController = navigation
         window.makeKeyAndVisible()
+    }
+}
+
+extension AppCoordinator: PostsNavigating {
+    func didTapMore(by user: User) {
+
+    }
+
+    func didTapDetails(of post: Post) {
+
     }
 }

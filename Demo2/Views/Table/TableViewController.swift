@@ -19,13 +19,16 @@ final class TableViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delaysContentTouches = true
+        tableView.panGestureRecognizer.delaysTouchesBegan = true
 
         return tableView
     }()
 
-    private let viewModel: CommonViewModeling
+    private lazy var dataSource = TableViewDataSource(tableView: tableView)
+    private let viewModel: ListViewModeling
 
-    init(viewModel: CommonViewModeling) {
+    init(viewModel: ListViewModeling) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -38,25 +41,26 @@ final class TableViewController: UIViewController {
         view = UIView()
         view.backgroundColor = .white
         view.addSubview(tableView)
+        tableView.pin(to: view)
         add(loader, to: view)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        render(using: viewModel.state)
+        render()
 
         viewModel.register(object: self, for: Action { [weak self] in
             guard let self = self else { return }
 
-            self.render(using: self.viewModel.state)
+            self.render()
         })
     }
 
-    private func render(using state: CommonState) {
-        NSLog("state \(state)")
+    private func render() {
         DispatchQueue.main.async {
-            switch state {
+            self.title = self.viewModel.title
+            switch self.viewModel.state {
             case .loading:
                 self.presentLoader()
             case let .content(items):
@@ -74,9 +78,11 @@ final class TableViewController: UIViewController {
 
     private func present(items: [ListItem]) {
         loader.stopLoading()
+        dataSource.load(items: items)
     }
 
     private func presentLoader() {
         loader.startLoading()
     }
 }
+

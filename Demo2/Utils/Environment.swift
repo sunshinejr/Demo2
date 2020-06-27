@@ -10,11 +10,13 @@ import Foundation
 
 struct Environment {
     let api: Networking
+    let users: UserProviding
 }
 
 extension Environment {
     static let live = Environment(
-        api: URLSessionNetworking()
+        api: URLSessionNetworking(),
+        users: InMemoryUsers()
     )
 }
 

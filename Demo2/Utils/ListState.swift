@@ -1,5 +1,5 @@
 //
-//  CommonState.swift
+//  ListState.swift
 //  Demo2
 //
 //  Created by Łukasz Mróz on 27/06/2020.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum CommonState: Equatable {
+enum ListState: Equatable {
     case loading
     case content([ListItem])
     case error(ErrorModel)
 }
 
-protocol CommonViewModeling {
-    var state: CommonState { get }
+protocol ListViewModeling: ViewModeling {
+    var title: String { get }
+    var state: ListState { get }
 
     func refresh()
-    func register(object: AnyObject, for updateCallback: Action)
 }

@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  ViewModeling.swift
 //  Demo2
 //
 //  Created by Łukasz Mróz on 27/06/2020.
@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct User: Codable, Hashable {
-    let id: Int
-    let name: String
-    let username: String
-    let email: String
+protocol ViewModeling {
+    func register(object: AnyObject, for updateCallback: Action)
 }
