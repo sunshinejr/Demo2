@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		857A61F124A7B59700184FB8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61F024A7B59700184FB8 /* UIColor.swift */; };
+		857A61F424A7BA7D00184FB8 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61F324A7BA7D00184FB8 /* CommentTableViewCell.swift */; };
+		857A61F624A7BA9300184FB8 /* CommentListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61F524A7BA9300184FB8 /* CommentListItemViewModel.swift */; };
+		857A61FE24A7BC1B00184FB8 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A61FD24A7BC1B00184FB8 /* UIStackView.swift */; };
+		857A620624A7BD1900184FB8 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A620524A7BD1900184FB8 /* PostViewModel.swift */; };
 		85EC291C24A7601000B6A9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC291B24A7601000B6A9BE /* AppDelegate.swift */; };
 		85EC292024A7601000B6A9BE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC291F24A7601000B6A9BE /* TableViewController.swift */; };
 		85EC292524A7601300B6A9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC292424A7601300B6A9BE /* Assets.xcassets */; };
@@ -38,7 +42,7 @@
 		85F4E25D24A7AF6700E2025F /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E25C24A7AF6700E2025F /* UIEdgeInsets.swift */; };
 		85F4E25F24A7AF7E00E2025F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E25E24A7AF7E00E2025F /* TableViewDataSource.swift */; };
 		85F4E26124A7AF9500E2025F /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26024A7AF9500E2025F /* UITableViewCell.swift */; };
-		85F4E26324A7AFA900E2025F /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26224A7AFA900E2025F /* PostViewModel.swift */; };
+		85F4E26324A7AFA900E2025F /* PostListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26224A7AFA900E2025F /* PostListItemViewModel.swift */; };
 		85F4E26524A7AFBD00E2025F /* Delayed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26424A7AFBD00E2025F /* Delayed.swift */; };
 		85F4E26924A7B2AF00E2025F /* UserProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26824A7B2AF00E2025F /* UserProviding.swift */; };
 		85F4E26B24A7B2BD00E2025F /* InMemoryUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4E26A24A7B2BD00E2025F /* InMemoryUsers.swift */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		857A61F024A7B59700184FB8 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		857A61F324A7BA7D00184FB8 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		857A61F524A7BA9300184FB8 /* CommentListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListItemViewModel.swift; sourceTree = "<group>"; };
+		857A61FD24A7BC1B00184FB8 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		857A620524A7BD1900184FB8 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		85EC291824A7601000B6A9BE /* Demo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EC291B24A7601000B6A9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85EC291F24A7601000B6A9BE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +86,7 @@
 		85F4E25C24A7AF6700E2025F /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		85F4E25E24A7AF7E00E2025F /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		85F4E26024A7AF9500E2025F /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
-		85F4E26224A7AFA900E2025F /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		85F4E26224A7AFA900E2025F /* PostListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListItemViewModel.swift; sourceTree = "<group>"; };
 		85F4E26424A7AFBD00E2025F /* Delayed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delayed.swift; sourceTree = "<group>"; };
 		85F4E26824A7B2AF00E2025F /* UserProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProviding.swift; sourceTree = "<group>"; };
 		85F4E26A24A7B2BD00E2025F /* InMemoryUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryUsers.swift; sourceTree = "<group>"; };
@@ -95,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		857A61F224A7BA7400184FB8 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				857A61F524A7BA9300184FB8 /* CommentListItemViewModel.swift */,
+				857A61F324A7BA7D00184FB8 /* CommentTableViewCell.swift */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
 		85EC290F24A7601000B6A9BE = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +169,7 @@
 		85EC293B24A765D900B6A9BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				857A61F224A7BA7400184FB8 /* CommentCell */,
 				85F4E25924A7AF3D00E2025F /* PostCell */,
 				85F4E25824A7AF2800E2025F /* Table */,
 				85F4E24424A7965E00E2025F /* LoaderViewController.swift */,
@@ -182,6 +200,7 @@
 				85F4E24924A796A800E2025F /* UIAlertController.swift */,
 				857A61F024A7B59700184FB8 /* UIColor.swift */,
 				85F4E25C24A7AF6700E2025F /* UIEdgeInsets.swift */,
+				857A61FD24A7BC1B00184FB8 /* UIStackView.swift */,
 				85F4E26024A7AF9500E2025F /* UITableViewCell.swift */,
 				85F4E24724A7967800E2025F /* UIView.swift */,
 				85F4E24F24A796D700E2025F /* UIViewController.swift */,
@@ -200,6 +219,7 @@
 		85F4E25824A7AF2800E2025F /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				857A620524A7BD1900184FB8 /* PostViewModel.swift */,
 				85F4E23A24A77E0500E2025F /* PostsViewModel.swift */,
 				85EC291F24A7601000B6A9BE /* TableViewController.swift */,
 				85F4E25E24A7AF7E00E2025F /* TableViewDataSource.swift */,
@@ -210,7 +230,7 @@
 		85F4E25924A7AF3D00E2025F /* PostCell */ = {
 			isa = PBXGroup;
 			children = (
-				85F4E26224A7AFA900E2025F /* PostViewModel.swift */,
+				85F4E26224A7AFA900E2025F /* PostListItemViewModel.swift */,
 				85F4E25A24A7AF4D00E2025F /* PostTableViewCell.swift */,
 			);
 			path = PostCell;
@@ -323,19 +343,23 @@
 				85F4E23B24A77E0500E2025F /* PostsViewModel.swift in Sources */,
 				85F4E26B24A7B2BD00E2025F /* InMemoryUsers.swift in Sources */,
 				85F4E24C24A796B700E2025F /* CGSize.swift in Sources */,
+				857A61FE24A7BC1B00184FB8 /* UIStackView.swift in Sources */,
 				85F4E25424A79B8800E2025F /* Reusable.swift in Sources */,
 				85EC293824A7659B00B6A9BE /* User.swift in Sources */,
 				85F4E26924A7B2AF00E2025F /* UserProviding.swift in Sources */,
 				85F4E25D24A7AF6700E2025F /* UIEdgeInsets.swift in Sources */,
+				857A620624A7BD1900184FB8 /* PostViewModel.swift in Sources */,
+				857A61F424A7BA7D00184FB8 /* CommentTableViewCell.swift in Sources */,
 				85F4E25024A796D700E2025F /* UIViewController.swift in Sources */,
 				85F4E25B24A7AF4D00E2025F /* PostTableViewCell.swift in Sources */,
 				85F4E23D24A77E2400E2025F /* ListItem.swift in Sources */,
 				85EC293424A7658000B6A9BE /* Post.swift in Sources */,
 				85F4E23F24A77E3200E2025F /* ListState.swift in Sources */,
-				85F4E26324A7AFA900E2025F /* PostViewModel.swift in Sources */,
+				85F4E26324A7AFA900E2025F /* PostListItemViewModel.swift in Sources */,
 				85F4E24124A77E4200E2025F /* Action.swift in Sources */,
 				85F4E24824A7967800E2025F /* UIView.swift in Sources */,
 				85F4E23024A770A600E2025F /* Constants.swift in Sources */,
+				857A61F624A7BA9300184FB8 /* CommentListItemViewModel.swift in Sources */,
 				85F4E25724A7A67200E2025F /* ViewModeling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

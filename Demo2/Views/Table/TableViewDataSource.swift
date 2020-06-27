@@ -18,7 +18,7 @@ final class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDel
 
         tableView.dataSource = self
         tableView.delegate = self
-        [PostTableViewCell.self].forEach(tableView.register(cell:))
+        [PostTableViewCell.self, CommentTableViewCell.self].forEach(tableView.register(cell:))
     }
 
     func load(items: [ListItem]) {
@@ -45,8 +45,11 @@ final class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDel
             cell.fixForSelfSizingBiggerThenDefaultCell(in: tableView)
             cell.viewModel = post
             return cell
-        case let .comment(_, title, body, author, tapAction):
-            return UITableViewCell()
+        case let .comment(comment):
+            let cell = tableView.dequeue(cell: CommentTableViewCell.self, indexPath: indexPath)
+            cell.fixForSelfSizingBiggerThenDefaultCell(in: tableView)
+            cell.viewModel = comment
+            return cell
         }
     }
 

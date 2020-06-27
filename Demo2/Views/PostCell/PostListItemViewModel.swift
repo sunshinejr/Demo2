@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PostViewModeling: ViewModeling {
+protocol PostListItemViewModeling: ViewModeling {
     var title: String { get }
     var body: String { get }
     var author: String? { get }
@@ -17,7 +17,7 @@ protocol PostViewModeling: ViewModeling {
     var didTapPost: (() -> Void)? { get }
 }
 
-final class PostViewModel: PostViewModeling, Equatable {
+final class PostListItemViewModel: PostListItemViewModeling, Equatable {
     var title: String { post.title }
     var body: String { post.body }
     let didTapPost: (() -> Void)?
@@ -76,7 +76,7 @@ final class PostViewModel: PostViewModeling, Equatable {
         }
     }
 
-    static func == (lhs: PostViewModel, rhs: PostViewModel) -> Bool {
+    static func == (lhs: PostListItemViewModel, rhs: PostListItemViewModel) -> Bool {
         return lhs.post == rhs.post
     }
 }

@@ -74,4 +74,10 @@ extension UIView {
 
         return view
     }
+
+    static func colored(_ color: UIColor) -> UIView {
+        let view = UIView()
+        view.backgroundColor = color
+        return view
+    }
 }

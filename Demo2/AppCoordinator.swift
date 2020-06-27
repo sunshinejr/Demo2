@@ -33,7 +33,7 @@ extension AppCoordinator: PostsNavigating {
     }
 
     func didTapDetails(of post: Post) {
-        let controller = TableViewController(viewModel: PostsViewModel(navigation: self))
+        let controller = TableViewController(viewModel: PostViewModel(post: post, navigation: self))
         navigation?.pushViewController(controller, animated: true)
     }
 }
