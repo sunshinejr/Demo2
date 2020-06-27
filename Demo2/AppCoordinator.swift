@@ -16,7 +16,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        window.rootViewController = TableViewController()
+        window.rootViewController = TableViewController(viewModel: PostsViewModel())
         window.makeKeyAndVisible()
     }
 }
