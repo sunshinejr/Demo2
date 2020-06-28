@@ -1,7 +1,7 @@
 ## Demo
 
-This one is a demo project my current favourite flavor of MVVM with UIKit.<br />
-Current status is still **WIP (Work In Progress)**.
+This one is a demo project of my current favourite flavor of MVVM+C with UIKit.<br />
+Current status is still **Work In Progress**.
 
 ## Launching
 
